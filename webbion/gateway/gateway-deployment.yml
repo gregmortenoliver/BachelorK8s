@@ -23,10 +23,10 @@ spec:
             - name: USER_SERVICE_URL
               value: "http://user-service-service:3001"
             - name: ORG_SERVICE_URL
-              value: "http://org-service-service:3001"
+              value: "http://org-service-service:3002"
             - name: SITE_SERVICE_URL
-              value: "http://site-service-service:3001"
+              value: "http://site-service-service:3003"
             - name: BOOKING_SERVICE_URL
-              value: "http://booking-service-service:3001"
+              value: "http://booking-service-service:3004"
       imagePullSecrets:
         - name: boliver
