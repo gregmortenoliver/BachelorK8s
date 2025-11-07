@@ -10,43 +10,16 @@ spec:
     - host: argo.tail732e1e.ts.net
       http:
         paths:
-          # user service api
-          - path: /api/users(/|$)(.*)
+          # Route ALL API traffic through Gateway
+          - path: /api(/|$)(.*)
             pathType: ImplementationSpecific
             backend:
               service:
-                name: user-service-service
+                name: gateway-service
                 port:
-                  number: 3001
+                  number: 3000
           
-          # org service api
-          - path: /api/orgs(/|$)(.*)
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: org-service-service
-                port:
-                  number: 3002
-          
-          # site service api
-          - path: /api/sites(/|$)(.*)
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: site-service-service
-                port:
-                  number: 3003
-          
-          # booking service api
-          - path: /api/bookings(/|$)(.*)
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: booking-service-service
-                port:
-                  number: 3004
-          
-          # web app
+          # Web app handles everything else
           - path: /()(.*)
             pathType: ImplementationSpecific
             backend:
