@@ -29,7 +29,10 @@ spec:
               value: "http://argo.tail732e1e.ts.net:30855"
             
             - name: PUBLIC_API_URL
-              value: "http://gateway-service:3000"
+              valueFrom:
+                secretKeyRef:
+                  name: public-api-url
+                  key: PUBLIC_API_URL
 
             - name: PUBLIC_AUTH0_CLIENT_ID
               valueFrom:
