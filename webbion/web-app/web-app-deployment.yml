@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: webbion-web-app
-          image: ghcr.io/gregmortenoliver/webbion:test
+          image: ghcr.io/gregmortenoliver/webbion:main
           ports:
             - containerPort: 3000
           imagePullPolicy: Always

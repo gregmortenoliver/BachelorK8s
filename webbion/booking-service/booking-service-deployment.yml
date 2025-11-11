@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: booking-service-deployment
-          image: ghcr.io/gregmortenoliver/booking-service:test
+          image: ghcr.io/gregmortenoliver/booking-service:main
           ports:
             - containerPort: 3004
           env:
