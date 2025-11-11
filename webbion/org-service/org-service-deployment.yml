@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: org-service-deployment
-          image: ghcr.io/gregmortenoliver/org-service:main
+          image: ghcr.io/gregmortenoliver/org-service:latest
           ports:
             - containerPort: 3002
           env:
