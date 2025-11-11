@@ -24,34 +24,28 @@ spec:
           env:
             - name: HOST
               value: "0.0.0.0"
-            
             - name: ORIGIN
               value: "http://argo.tail732e1e.ts.net:30855"
-            
             - name: PUBLIC_API_URL
               valueFrom:
                 secretKeyRef:
                   name: public-api-url
                   key: PUBLIC_API_URL
-
             - name: PUBLIC_AUTH0_CLIENT_ID
               valueFrom:
                 secretKeyRef:
                   name: auth0-id
                   key: PUBLIC_AUTH0_CLIENT_ID
-
             - name: PUBLIC_AUTH0_DOMAIN
               valueFrom:
                 secretKeyRef:
                   name: auth0-domain
                   key: PUBLIC_AUTH0_DOMAIN
-
             - name: PUBLIC_AUTH0_AUDIENCE
               valueFrom:
                 secretKeyRef:
                   name: auth0-audience
                   key: PUBLIC_AUTH0_AUDIENCE
-
             - name: PUBLIC_AUTH0_CALLBACK_URL
               valueFrom:
                 secretKeyRef:
