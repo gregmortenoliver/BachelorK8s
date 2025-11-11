@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: site-service-deployment
-          image: ghcr.io/gregmortenoliver/sites-service:test
+          image: ghcr.io/gregmortenoliver/sites-service:latest
           ports:
             - containerPort: 3003
           env:
