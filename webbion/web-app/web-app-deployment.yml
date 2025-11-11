@@ -18,13 +18,11 @@ spec:
         - name: webbion-web-app
           image: ghcr.io/gregmortenoliver/webbion:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 4173
           imagePullPolicy: Always
           env:
             - name: HOST
               value: "0.0.0.0"
-            - name: PORT
-              value: "3000"
             - name: ORIGIN
               value: "http://argo.tail732e1e.ts.net:30855"
             - name: PUBLIC_API_URL
