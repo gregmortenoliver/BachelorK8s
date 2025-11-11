@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: webbion-web-app
-          image: ghcr.io/gregmortenoliver/webbion:latest
+          image: ghcr.io/gregmortenoliver/webbion:test
           command: ["bun", "run", "preview", "--host"]
           ports:
             - containerPort: 4173
