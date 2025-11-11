@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: gateway-deployment
-          image: ghcr.io/gregmortenoliver/gateway:test
+          image: ghcr.io/gregmortenoliver/gateway:main
           ports:
             - containerPort: 3000
           env:
