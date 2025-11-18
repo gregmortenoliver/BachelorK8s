@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   # This name MUST match the 'serviceName' in the StatefulSet.
-  name: user-mongo-service
+  name: org-mongo-service
   namespace: default
 spec:
   # 'clusterIP: None' is what makes this a "headless" service.
   clusterIP: None
   selector:
     # This must match the labels on the MongoDB pods.
-    app: user-mongo
+    app: org-mongo
   ports:
     - name: mongo
       port: 27017
