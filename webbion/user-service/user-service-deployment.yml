@@ -34,5 +34,20 @@ spec:
               value: "mongodb://$(MONGO_USER):$(MONGO_PASSWORD)@user-mongo-clusterip-service:27017/admin?authSource=admin"
             - name: GATEWAY_URL
               value: "http://gateway-service:3000"
+            - name: AUTH0_DOMAIN
+              valueFrom:
+                secretKeyRef:
+                  name: auth0-domain
+                  key: PUBLIC_AUTH0_DOMAIN
+            - name: AUTH0_M2M_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: auth0-m2m-secrets
+                  key: AUTH0_M2M_CLIENT_ID
+            - name: AUTH0_M2M_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: auth0-m2m-secrets
+                  key: AUTH0_M2M_CLIENT_SECRET
       imagePullSecrets:
         - name: boliver
